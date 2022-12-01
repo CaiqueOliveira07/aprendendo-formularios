@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <style>
+        *{
+    font-family: 'Times New Roman', Times, serif;
+}
+    </style>
+</head>
+<body>
+
+    <h1>EXEMPLO DE FORMULARIO 01</h1>
+
+    <form action="cadastro.php"  method="post" autocomplete="off" >
+<p>
+    <label for="inome">nome :</label>
+     <input type="text" name="nome" id="inome"> 
+</p>
+
+<p>
+    <label for="isobrenome">sobrenome :</label> 
+     <input type="text" name="sobrenome" id="isobrenome"> 
+</p>
+<p> <input type="submit" value="ENVIAR"></p>
+
+    </form>
+    <br>
+    <br>
+    
+    <h1>EXEMPLO DE FORMULARIO 02</h1>
+    
+    <form action="cadastro.php" method="POST">
+        <p>
+            <label for="iuso"> USUARIO :</label>
+            <input type="text" name="uso" id="iuso" required minlength="8"
+            maxlength="15" size="15" placeholder="nome do usuario" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">SENHA :</label>
+            <input type="password" name="sen" id="isen" required minlength="8"
+            maxlength="10" size="10" placeholder="minimo 8 letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="ENVIAR">
+            <input type="reset" value="LIMPAR">
+        </p>
+    </form>
+    <br>
+    <br>
+
+    <h1>EXEMPLO DE FORMULARIO 03</h1>
+    <h1>FORMULARIO ALUNO  </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+<p>
+    <label for="inome"> NOME:</label>
+    <input type="text" name="nome" id="inome" required maxlength="20" placeholder="nome completo" autocomplete="name" required>
+</p>
+<p>
+    <label for="imedia"> MEIDA :</label>
+    <input type="number" name="media" id="imedia" min="0" max="10" placeholder="DE 0a10" step="0.1" value="5" required maxlength="10" required>
+</p>
+<p>
+    <label for="imes"> PERIODO LETIVO :</label>
+    <input type="month" name="mes" id="imes" value="2020-07">
+</p>
+<p>
+    <label for="idia"> DIA DA PROVA :</label>
+    <input type="date" name="dia" id="idia" value="2020-07-14">
+</p>
+<p>
+    <label for="ihora"> HORARIO DA PROVA :</label>
+    <input type="time" name="hora" id="ihora">
+</p>
+
+<input type="submit" value=" ENVIAR ">
+<input type="reset"  value=" LIMPAR " >
+
+    </form>
+    <br>
+    <br>
+
+
+    <h1>EXEMPLO DE FORMULARIO 04</h1>
+    <form action="cadastro.php" mathod="get" autocomplete="on">
+<fieldset>
+    
+
+    <legend>DADOS PESSOAIS </legend>
+    <p>
+        <label for="inome">NOME:</label>
+        <input type="text" name="nome" id="inome" minlength="3" maxlength="30" required required placeholder="nome completo" size="30">
+    </p>
+    <p>
+        <label for="iemail">E-MAIL:</label>
+        <input type="email" name="email" id="iemail" maxlength="30" autocomplete="email" required required placeholder="nãotem@hotmail.com.br">
+    </p>
+    <p>
+        <label for="itelefone">TELEFONE:</label>
+        <input type="number" name="telefone" id="itelefone" maxlength="12" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="xx xxxxxxxxx" >
+    </p>
+</fieldset>
+<p>
+    <input type="submit" value="ENVIAR ">
+    <input type="reset" value="LIMPAR">
+</p>
+    </form>
+    <br>
+    <br>
+
+    <h1>EXEMPLO DE FORMULARIO 05 </h1>
+    <form action="cadastro.php" method="get" autocomplete="on"></form>
+    
+    <fieldset>
+        <legend>SEXO</legend>
+        <input type="radio" name="sexo" id="imas"> 
+        <label for="imas">MASCULINO</label><br>
+        <input type="radio" name="sexo" id="ifem">
+        <label for="ifem">FEMININO</label>
+    </fieldset>
+
+    <fieldset>
+
+        <legend>ESPORTES FAVORITOS</legend>
+        <input type="checkbox" name="tenis" id="itenis" checked> <label for="itenis" 
+        >TÊNIS</label><br>
+        
+        <input type="checkbox" name="basquete" id="ibas"><label for="ibas">BASQUETE</label><br>
+
+        <input type="checkbox" name="volei" id="ivol"><label for="ivol">VOLEI
+        </label><br>
+
+        <input type="checkbox" name="golfe" id="igolf"><label for="igolf">GOLFE
+        </label>
+    </fieldset>
+    <p>
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="LIMPAR">
+    </p>
+    <br>
+    <br>
+    
+
+
+    <h1>EXEMPLO DE FORMULARIO 06</h1>
+    <h1>TIPOS DE FORMULARIOS</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+<fieldset>
+    <legend>FORMULARIO</legend>
+    <p>
+        <label for="icor"> COR</label>
+        <input type="color" name="cor" id="icor" value="#00ff00">
+    </p>
+    <p>
+        <label for="inivel"> NIVEL DE SATISFAÇÃO :</label>
+        <input type="range" name="nivel" id="inivel" >
+    </p>
+    <p>
+        <label for="ifoto"> FOTO DO PERFIL :</label>
+        <input type="file" name="foto" id="ifoto">
+    </p>
+    <p>
+</fieldset>
+    <input type="submit" value="ENVIAR" >
+    <input type="reset" value="LIMPAR">
+</p>
+
+    </form>
+    <br>
+    <br>
+
+    <h1>EXEMPLO DE FORMULARIO 07 </h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">ESTADO:</label>
+            <select name="estado" id="iestado">
+                <option value="iest" selected >---ESCOLHA---</option>
+            <optgroup label="REGIÃO SULDESTE">
+                <option value="SP">SÃO PAULO</option>
+                <option value="MG"> MINAS GERAIS</option>
+                <option value="RJ">RIO DE JANEIRO</option>
+            </optgroup>
+
+            <optgroup label="REGIÃO NORDESTE">
+                <option value="MA">MARANHÃO</option>
+                <option value="PE">PERNAMBUCO</option>
+                <option value="RN">RIO GRANDE DO NORTE</option>
+            </optgroup>
+            
+            </select>
+                      
+        </p>
+        <p>
+        <label for="iprof">PROFISSÃO:</label>
+        <input type="text" name="prof" id="iprof" list="lstprof" >
+        <datalist id="lstprof">
+            <option value="ADM">Administrador</option>
+            <option value="CONT">Contabilidade</option>
+            <option value="DEV">Desenvolvedor</option>
+            <option value="PROF">Professor</option>
+        </datalist>
+    
+        </p>
+        <p>
+            <label for="imsg">MENSAGEM</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p>
+       
+<p>
+    <input type="submit" value="ENVIAR">
+    <input type="reset" value="LIMPAR">
+</p>
+
+
+    </form>
+    <br>
+    <br>
+
+
+    <h1>EXEMPLO DE FORMULARIO 08 </h1>
+    <form action="cadastro.php" method="post" autocomplete="on"></form>
+    <p>
+        <label for="in1">NUMERO 1 :</label>
+        <input type="number"name="n1" id="in1" min="0" max="50" required 
+        oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+    </p>
+
+    <p>
+        <label for="in2">NUMERO 2 :</label>
+        <input type="number"name="n2" id="in2" min="0" max="50" required
+        oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+    </p>
+    <p>
+        <label for="isoma">SOMA :</label>
+        <output name="soma" id="isoma"> 0</output>
+    </p>
+
+    <p>
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="LIMPAR">
+    </p>
+    <br>
+    <br>
+
+    <h1>EXEMPLO DE FORMULARIO 09 </h1>
+    <form action="cadastro.php" method="get" autocomplete="on"></form>
+    <p>
+        <label for="inum">NUMERO :</label>
+        <input type="range" name="num" id="inum" min="0" max="10"
+        oninput="ival.innerHTML = Number(inum.value)">
+        <output id="ival">5</output>
+    </p>
+    <p>
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="LIMPAR">
+    </p>
+    <br>
+    <br>
+
+    <h1>EXEMPLO DE FORMULARIO 10 </h1>
+    <form action="cadastro.php" method="get" autocomplete="on"></form>
+   <p>
+    <label for="iano">EM QUE ANO VOCE NASCEU ?</label>
+    <input type="number" name="ano" id="iano" min="1990" max="2022"
+    oninput="calcidade()">
+   </p>
+   <p>
+    <label for="iidade">SUA IDADE É :</label>
+    <output id="iidade">0</output>
+   </p>
+  
+    <p>
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="LIMPAR">
+    </p>
+
+    <script>
+function calcidade()
+{
+    let atual = new Date().getFullYear()
+    iidade.innerHTML = Number(atual) - Number(iano.value)
+}
+
+    </script>
+    
+    
+</body>
+</html>
